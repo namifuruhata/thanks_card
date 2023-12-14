@@ -309,9 +309,9 @@ function showModal() {
         <h2>ポイントカード登録</h2>
         <form action="main2.php" method="post">
             <input type="hidden" name="action" value="register">
-            名前: <input type="text" name="name"><br>
-            メールアドレス: <input type="email" name="email" id="email-field" readonly><br>
-            通知用メールアドレス: <input type="email" name="notification_email"><br>
+            カードの名前: <input type="text" name="name"><br>
+            あなたのメールアドレス: <input type="email" name="email" id="email-field" readonly><br>
+            相手のメールアドレス: <input type="email" name="notification_email"><br>
             <input type="submit" value="登録">
         </form>
         <?php echo $registerMessage; ?>

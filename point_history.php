@@ -234,24 +234,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <body>
 
 <form action="point_history.php" method="post">
-    名前: <input type="text" name="name"><br>
-    メールアドレス: <input type="email" name="email" id="email-field" readonly><br>
+    カードの名前: <input type="text" name="name"><br>
+    あなたのメールアドレス: <input type="email" name="email" id="email-field" readonly><br>
     <input type="submit" value="履歴表示">
 </form>
 <div class="card">
-    <h2>18ポイント貯まったカード</h2>
+    <h2>貯まったポイントカード</h2>
     <ul id="completed-cards-list">
         <!-- ここに動的に18ポイントに達したカードが表示されます -->
     </ul>
 </div>
 <div class="card">
-    <h2>ユーザーカード一覧</h2>
+    <h2>あなたへのカード</h2>
     <ul id="user-cards-list">
         <?php foreach ($userCards as $card): ?>
             <li>
-                名前: <?php echo htmlspecialchars($card['name']); ?>,
+                カード名: <?php echo htmlspecialchars($card['name']); ?>,
                 アドレス: <?php echo htmlspecialchars($card['email']); ?>,
-                ポイント: <?php echo htmlspecialchars($card['point']); ?>
+                現在のポイント: <?php echo htmlspecialchars($card['point']); ?>
             </li>
         <?php endforeach; ?>
     </ul>
